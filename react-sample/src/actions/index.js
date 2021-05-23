@@ -1,15 +1,15 @@
-//export const COUNTPLUS='countPlus'
-//export const COUNTMINUS='countMinus'
+export const COUNTPLUS='countPlus'
+export const COUNTMINUS='countMinus'
 export const ADDTASK='newTask'
 export const REMOVETASK='removeTask'
 
-// export const countPlus =()=>({//Actionクリエーター
-//     type:COUNTPLUS//Action
-// })
+ export const countPlus =()=>({//Actionクリエーター
+     type:COUNTPLUS//Action
+ })
 
-// export const countMinus =()=>({//Actionクリエーター
-//     type:COUNTMINUS//Action
-// })
+ export const countMinus =()=>({//Actionクリエーター
+     type:COUNTMINUS//Action
+ })
 
 
 export const newTask =(e)=>({//Actionクリエーター
@@ -19,7 +19,7 @@ export const newTask =(e)=>({//Actionクリエーター
 
 export const removeTask =(index)=>({//Actionクリエーター
     type:REMOVETASK,//Action
-    index:index
+    index:index//削除する際に削除対象となるタスクをINDEX番号と紐付けて特定
 })
 
 
