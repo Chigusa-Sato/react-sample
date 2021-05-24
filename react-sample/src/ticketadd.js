@@ -1,13 +1,7 @@
 import { addTicket } from "./actions";
 import React from "react";
 import { connect } from "react-redux"; //reduxで使う
-//import Ticketview from './App';
-//  import {
-//      BrowserRouter as Router,
-//      Switch,
-//      Route,
-//      Link
-//    } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 
 const Ticket = (props) => {
   const add = (etitle, ename, edetail, eend, estart) => {
@@ -32,7 +26,13 @@ const Ticket = (props) => {
     console.log($start.value);
     estart = $start.value; //担当者を取得
     props.addTicket(etitle, edetail, ename, eend, estart);
+    $title.value = "";
+    $detail.value = "";
+    $name.value = "";
+    $end.value = "";
+    $start.value = "";
   };
+  const history = useHistory();
 
   return (
     <React.Fragment>
@@ -61,6 +61,7 @@ const Ticket = (props) => {
             <input type="date" id="start" />
           </li>
           <button onClick={add}>追加</button>
+          <button onClick={history.goBack}>戻る</button>
           {/* <Link to="/ticket">追加</Link> */}
         </ul>
         {/* <Switch> */}
