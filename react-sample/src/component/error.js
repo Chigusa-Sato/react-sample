@@ -1,5 +1,5 @@
-const Error=()=>{
-    return <h2>エラー</h2>
-}
+const Error = () => {
+  return <h2>エラー</h2>;
+};
 
-export default Error
+export default Error;
