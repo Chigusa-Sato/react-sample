@@ -1,6 +1,5 @@
 import React from 'react';
 import {connect, createDispatchHook} from 'react-redux';
-import todo from '../reducers/todo';
  import {
     newTask,
     removeTask} 
